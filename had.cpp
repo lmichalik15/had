@@ -3,8 +3,8 @@
 
 #include "had.h"
 
-int i, j, height = 10;
-int width = 10, gameover, score;
+int i, j, height = 20;
+int width = 20, gameover, score;
 
 void draw()
 {
