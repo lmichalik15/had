@@ -1,4 +1,4 @@
-﻿
+
 // had_03.cpp : Defines the entry point for the application.
 //
 
@@ -150,11 +150,11 @@ void randomObstacle()                                     // funkce pro random p
 	srand(time(0));
 	l = 1 + rand() % 13;
 	m = 1 + rand() % 28;
-	
+
 	if (obstacle == 0 && field[l][m] == 0 && field[l][m] != -1)
 	{
-			field[l][m] = -2;
-			obstacle = 1;
+		field[l][m] = -2;
+		obstacle = 1;
 	}
 }
 
@@ -268,7 +268,7 @@ void movement()                                        // pohyb hada
 			tail -= 1;
 			obstacle = 0;
 		}
-		
+
 		if (field[x][y] == -2)
 		{
 			gameOver();
@@ -309,6 +309,7 @@ void movement()                                        // pohyb hada
 
 		head++;
 		field[x][y] = head;
+		Sleep(15);
 	}
 
 	if (direction == dolu) {                   // dolu
@@ -340,6 +341,7 @@ void movement()                                        // pohyb hada
 
 		head++;
 		field[x][y] = head;
+		Sleep(15);
 	}
 }
 
@@ -401,7 +403,7 @@ int main()
 
 	system("pause");
 	system("cls");
-	
+
 	setup();                                              // celkove nastaveni hry
 
 	while (game == 0)
